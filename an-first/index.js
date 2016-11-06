@@ -284,7 +284,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_54058338_p0.png?1478461462844", id:"_54058338_p0"}
+		{src:"resource/bg.jpg?1478461462844", id:"_54058338_p0"}
 	],
 	preloads: []
 };
