@@ -108,8 +108,12 @@ function handleComplete(evt) {
 $(document).ready(function() {
 	$(window).resize(function(e) {
 		var scale = $(window).width()/640;
-		scale > 1 ? scale = 1 : scale = scale;
-		$('.page-con').css('transform', 'scale(' + scale + ')');
+		scale > 0.7 ? scale = 0.7 : scale = scale;
+		$('body').css({
+			'transform': 'scale(' + scale + ')',
+			'width': 100 / scale + '%',
+			'height': 100 / scale + '%'
+		});
 	});
 	$(window).resize();
 })
@@ -123,17 +127,18 @@ $(document).ready(function() {
 	.page-con {
 		width:  640px;
 		margin: 0 auto;
-		transform-origin: 0% 0%;
+		border: 1px dashed #aaa;
 	}
 	body {
 		height: 100%;
+		transform-origin: 0% 0%;
 		overflow-y: hidden;
 	}
 </style>
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:640px; height:960px">
+	<div id="animation_container" class="page-con" style="background-color:rgba(255, 255, 255, 1.00); width:640px; height:960px">
 		<canvas id="canvas" width="640" height="960" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:640px; height:960px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
