@@ -43,23 +43,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 p.nominalBounds = new cjs.Rectangle(-6,-6,12,12);
 
 
-(lib.an_TextInput = function(options) {
-	this._element = new $.an.TextInput(options);
-	this._el = this._element.create();
-	var $this = this;
-	this.addEventListener('added', function() {
-		$this._lastAddedFrame = $this.parent.currentFrame;
-		$this._element.attach($('#dom_overlay_container'));
-	});
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,100,22);
-
-p._tick = _tick;
-p._handleDrawEnd = _handleDrawEnd;
-p._updateVisibility = _updateVisibility;
-
-
-
 (lib.Symbol6 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -215,13 +198,6 @@ p.nominalBounds = new cjs.Rectangle(-6,-6,12,12);
 
 	this.timeline.addTween(cjs.Tween.get(this.___camera___instance).wait(36).to({x:312},0).wait(1).to({x:300.9},0).wait(1).to({x:290},0).wait(1).to({x:279.5},0).wait(1).to({x:269.2},0).wait(1).to({x:259.1},0).wait(1).to({x:249.3},0).wait(1).to({x:239.8},0).wait(1).to({x:230.4},0).wait(1).to({x:221.3},0).wait(1).to({x:212.4},0).wait(1).to({x:203.7},0).wait(1).to({x:195.1},0).wait(1).to({x:186.8},0).wait(1).to({x:178.6},0).wait(1).to({x:170.6},0).wait(1).to({x:162.8},0).wait(1).to({x:155.1},0).wait(1).to({x:147.6},0).wait(1).to({x:140.2},0).wait(1).to({x:133},0).wait(1).to({x:125.8},0).wait(1).to({x:118.8},0).wait(1).to({x:111.9},0).wait(1).to({x:105.2},0).wait(1).to({x:98.5},0).wait(1).to({x:91.9},0).wait(1).to({x:85.5},0).wait(1).to({x:79.1},0).wait(1).to({x:72.8},0).wait(1).to({x:66.6},0).wait(1).to({x:60.4},0).wait(1).to({rotation:-0.2,x:54.4,y:482.4},0).wait(1).to({rotation:-0.5,x:48.4,y:484.8},0).wait(1).to({rotation:-0.7,x:42.4,y:487.1},0).wait(1).to({rotation:-1,x:36.6,y:489.5},0).wait(1).to({rotation:-1.2,x:30.8,y:491.9},0).wait(1).to({rotation:-1.5,x:25,y:494.3},0).wait(1).to({rotation:-1.7,x:19.3,y:496.7},0).wait(1).to({rotation:-2,x:13.6,y:499.1},0).wait(1).to({rotation:-2.2,x:8,y:501.4},0).wait(1).to({rotation:-2.5,x:2.4,y:503.8},0).wait(1).to({rotation:-2.7,x:-3.1,y:506.2},0).wait(1).to({rotation:-3,x:-8.6,y:508.6},0).wait(1).to({rotation:-3.2,x:-14.1,y:511},0).wait(1).to({rotation:-3.5,x:-19.6,y:513.4},0).wait(1).to({rotation:-3.7,x:-25,y:515.7},0).wait(1).to({rotation:-4,x:-30.4,y:518.1},0).wait(1).to({rotation:-4.2,x:-35.7,y:520.5},0).wait(1).to({rotation:-4.5,x:-41.1,y:522.9},0).wait(1).to({rotation:-4.7,x:-46.4,y:525.3},0).wait(1).to({rotation:-5,x:-51.7,y:527.7},0).wait(1).to({rotation:-5.2,x:-57,y:530},0).wait(1).to({rotation:-5.5,x:-62.3,y:532.4},0).wait(1).to({rotation:-5.7,x:-67.5,y:534.8},0).wait(1).to({rotation:-6,x:-72.8,y:537.2},0).wait(1).to({rotation:-6.2,x:-78,y:539.6},0).wait(1).to({rotation:-6.5,x:-83.2,y:542},0).wait(1).to({rotation:-6.7,x:-88.4,y:544.3},0).wait(1).to({rotation:-7,x:-93.6,y:546.7},0).wait(1).to({rotation:-7.2,x:-98.8,y:549.1},0).wait(1).to({rotation:-7.5,x:-104,y:551.5},0).wait(1).to({rotation:-7.7,x:-109.2,y:553.9},0).wait(1).to({rotation:-8,x:-114.4,y:556.2},0).wait(1).to({rotation:-8.2,x:-119.6,y:558.6},0).wait(1).to({rotation:-8.5,x:-124.8,y:561},0).wait(1).to({rotation:-8.7,x:-129.9,y:563.4},0).wait(1).to({rotation:-9,x:-135.1,y:565.8},0).wait(1).to({rotation:-9.2,x:-140.3,y:568.2},0).wait(1).to({rotation:-9.5,x:-145.5,y:570.5},0).wait(1).to({rotation:-9.7,x:-150.6,y:572.9},0).wait(1).to({rotation:-10,x:-155.8,y:575.3},0).wait(1).to({rotation:-10.2,x:-160.9,y:577.7},0).wait(1).to({rotation:-10.5,x:-166.1,y:580.1},0).wait(1).to({rotation:-10.7,x:-171.2,y:582.5},0).wait(1).to({rotation:-11,x:-176.4,y:584.8},0).wait(1).to({rotation:-11.2,x:-181.6,y:587.2},0).wait(1).to({rotation:-11.5,x:-186.7,y:589.6},0).wait(1).to({rotation:-11.7,x:-191.9,y:592},0).wait(1).to({rotation:-12,x:-197.1,y:594.4},0).wait(1).to({rotation:-12.2,x:-202.2,y:596.8},0).wait(1).to({rotation:-12.5,x:-207.4,y:599.1},0).wait(1).to({rotation:-12.7,x:-212.5,y:601.5},0).wait(1).to({rotation:-13,x:-217.7,y:603.9},0).wait(1));
 
-	// Layer 3
-	this.instance = new lib.an_TextInput({'id': '', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
-
-	this.instance.setTransform(129.3,99.8,2,1.998,0,0,0,49.9,10.8);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(120));
-
 	// btn
 	this.btn_play = new lib.Symbol6();
 	this.btn_play.parent = this;
@@ -249,9 +225,17 @@ p.nominalBounds = new cjs.Rectangle(-6,-6,12,12);
 	this.timeline.addTween(cjs.Tween.get(this.shape_2).wait(120));
 
 	// 图层 6
+	this.instance = new lib.圈();
+	this.instance.parent = this;
+	this.instance.setTransform(24,486.1);
+	this.instance._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(54).to({_off:false},0).wait(66));
+
+	// 图层 6
 	this.instance_1 = new lib.圈();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(24,486.1);
+	this.instance_1.setTransform(446.1,636.2);
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(54).to({_off:false},0).wait(66));
@@ -259,29 +243,21 @@ p.nominalBounds = new cjs.Rectangle(-6,-6,12,12);
 	// 图层 6
 	this.instance_2 = new lib.圈();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(446.1,636.2);
+	this.instance_2.setTransform(66.1,540.2);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(54).to({_off:false},0).wait(66));
-
-	// 图层 6
-	this.instance_3 = new lib.圈();
-	this.instance_3.parent = this;
-	this.instance_3.setTransform(66.1,540.2);
-	this.instance_3._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(31).to({_off:false},0).wait(89));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(31).to({_off:false},0).wait(89));
 
 	// 图层 5
+	this.instance_3 = new lib.圈();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(489.1,320.2);
+
 	this.instance_4 = new lib.圈();
 	this.instance_4.parent = this;
-	this.instance_4.setTransform(489.1,320.2);
+	this.instance_4.setTransform(617.1,170.1);
 
-	this.instance_5 = new lib.圈();
-	this.instance_5.parent = this;
-	this.instance_5.setTransform(617.1,170.1);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4}]}).to({state:[]},61).wait(59));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3}]}).to({state:[]},61).wait(59));
 
 	// con
 	this.con = new lib.con();
@@ -308,44 +284,12 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"resource/_54058338_p0.png?1479527184330", id:"_54058338_p0"},
-		{src:"components/lib/jquery-2.2.4.min.js?1479527184330", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1479527184330", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1479527184330", id:"an.TextInput"}
+		{src:"resource/_54058338_p0.png?1479527462395", id:"_54058338_p0"}
 	],
 	preloads: []
 };
 
 
-function _updateVisibility(evt) {
-	if((this.getStage() == null || this._off || this._lastAddedFrame != this.parent.currentFrame) && this._element) {
-		this._element.detach();
-		stage.removeEventListener('drawstart', this._updateVisibilityCbk);
-		this._updateVisibilityCbk = false;
-	}
-}
-function _handleDrawEnd(evt) {
-	var props = this.getConcatenatedDisplayProps(this._props), mat = props.matrix;
-	var tx1 = mat.decompose(); var sx = tx1.scaleX; var sy = tx1.scaleY;
-	var dp = window.devicePixelRatio || 1; var w = this.nominalBounds.width * sx; var h = this.nominalBounds.height * sy;
-	mat.tx/=dp;mat.ty/=dp; mat.a/=(dp*sx);mat.b/=(dp*sx);mat.c/=(dp*sy);mat.d/=(dp*sy);
-	this._element.setProperty('transform-origin', this.regX + 'px ' + this.regY + 'px');
-	var x = (mat.tx + this.regX*mat.a + this.regY*mat.c - this.regX);
-	var y = (mat.ty + this.regX*mat.b + this.regY*mat.d - this.regY);
-	var tx = 'matrix(' + mat.a + ',' + mat.b + ',' + mat.c + ',' + mat.d + ',' + x + ',' + y + ')';
-	this._element.setProperty('transform', tx);
-	this._element.setProperty('width', w);
-	this._element.setProperty('height', h);
-	this._element.update();
-}
-
-function _tick(evt) {
-	var stage = this.getStage();
-	stage&&stage.on('drawend', this._handleDrawEnd, this, true);
-	if(!this._updateVisibilityCbk) {
-		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
-	}
-}
 
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{}, AdobeAn = AdobeAn||{});
