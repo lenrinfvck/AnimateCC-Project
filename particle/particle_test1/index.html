@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ParticleJS - test</title>
+    <script src="../libs/createjs-2015.11.26.min.js"></script>
+    <script src="../libs/particlejs.min.js"></script>
+    <script>
+    var particleSystem = null;
+    var stage = null;
+
+    window.addEventListener("load", function() {
+        stage = new createjs.Stage("myCanvas");
+
+        particleSystem = new particlejs.ParticleSystem();
+
+        stage.addChild(particleSystem.container);
+
+        particleSystem.importFromJson({
+            "bgColor": "#000000",
+            "width": 500,
+            "height": 500,
+            "emitFrequency": "100",
+            "startX": 480,
+            "startXVariance": 400,
+            "startY": 250,
+            "startYVariance": 50,
+            "initialDirection": "0",
+            "initialDirectionVariance": "360",
+            "initialSpeed": "5",
+            "initialSpeedVariance": "3.7",
+            "friction": "0.038",
+            "accelerationSpeed": "0.0",
+            "accelerationDirection": "0",
+            "startScale": 1,
+            "startScaleVariance": 0.79,
+            "finishScale": "0",
+            "finishScaleVariance": "0",
+            "lifeSpan": "50",
+            "lifeSpanVariance": "196",
+            "startAlpha": "1",
+            "startAlphaVariance": "0",
+            "finishAlpha": "0.35",
+            "finishAlphaVariance": 0.5,
+            "shapeIdList": [
+                "blur_circle",
+                "circle"
+            ],
+            "startColor": {
+                "hue": 222,
+                "hueVariance": "55",
+                "saturation": "71",
+                "saturationVariance": "78",
+                "luminance": "83",
+                "luminanceVariance": "16"
+            },
+            "blendMode": true,
+            "alphaCurveType": "0"
+        });
+
+        createjs.Ticker.framerate = 60;
+        createjs.Ticker.timingMode = createjs.Ticker.RAF;
+        createjs.Ticker.addEventListener("tick", handleTick);
+    });
+
+    function handleTick() {
+        particleSystem.update();
+
+        stage.update();
+    }
+    </script>
+    <!-- CSS -->
+    <style>
+    canvas {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bg-con {
+        background: #f01;
+        width: 960px;
+        height: 270px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bg-con"></div>
+    <canvas width="960" height="540" id="myCanvas"></canvas>
+</body>
+
+</html>
